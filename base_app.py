@@ -69,6 +69,7 @@ def display_prediction(input_text):
         output ="Pro"
         st.success(f"{output} Sentiment Predicted")
         st.success("Tweets that support the belief of man-made climate change")
+		
     else:
         output = "News"
         st.warning(f"{output} Sentiment Predicted")
