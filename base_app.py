@@ -360,7 +360,7 @@ def main():
 		if st.button("Click me to see the conclusion"):
 				st.info(
 					"""
-					The SVC model performed better compared to all the models tested with an F1-Score of approximately 76%, when a Tfid vectorizer is used. After performing a hyperparameter tuning of the model, the F1-score rose by a very small marging of 0.5%.
+					The SVC model performed better compared to all the models tested with an F1-Score of approximately 76%, when a Tfid vectorizer is used. After performing a hyperparameter tuning of the model, the F1-score rose by a very small margin of 0.5%.
 
 					Naive Bayes process speed is the fastest, while it produced an underperforming average F1-score.
 
