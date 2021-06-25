@@ -92,7 +92,7 @@ def main():
 	if selection == "About The App":
 		st.image('resources/imgs/changes.gif', caption='Climate Change',use_column_width=True)
 		st.subheader("About the App")
-		st.info("The entire app is built using Machine Learning models that is able to classify whether or not a person believes in climate change, based on their novel tweet data.")
+		st.info("The entire app is built using Machine Learning models that are able to classify whether or not a person believes in climate change, based on their novel tweet data.")
 		# You can read a markdown file from supporting resources folder
 		st.markdown("Below is just the small portion of dataset that has been used to train the models")
 
@@ -167,7 +167,7 @@ def main():
 		st.image('resources/imgs/mostly_used.png', caption='Climate Change',use_column_width=True)
 		st.info(
 			"""
-			The most common words used, in hierachy, across all four categories are 'climate', 'change', 'global', and then 'warming'. This is expected as the topic is centred around these words.
+			The mostly common used words, in hierachy, across all four categories are 'climate', 'change', 'global', and then 'warming'. This is expected as the topic is centred around these words.
 
 			Also, words like 'science' and 'scientist' are frequent- which could imply that people are tweeting about scientific studies that support their views on climate change.
 
@@ -176,7 +176,7 @@ def main():
 		)
 
 	if selection == "Model Performance":
-		st.info("Below is the picture of how each Model used to create the app is performing")
+		st.info("Below is the picture of how each Model performs")
 		st.image('resources/imgs/models.png', caption='Climate Change',use_column_width=True)
 		model_selected = ["Select Model", "LogisticRegression", "RidgeClassifier", "LinearSVC", "SGDClassifier", "SVC"]
 		selected_model = st.selectbox("Choose Model Metrics By Model Type", model_selected)
