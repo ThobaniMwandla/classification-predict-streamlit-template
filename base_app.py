@@ -161,7 +161,19 @@ def main():
 					display_prediction(predict)
 		
 	if selection == "Data Visualisation":
-		pass
+		st.image('resources/imgs/tweet_dst.png', caption='Climate Change',use_column_width=True)
+		st.info("From the above Tweet vs Sentiment charts, approximately 54% of the tweets on our data believe that cliamte change is real and whereas only 8% are in opposition. However, 15% of the tweets are neither negative or positive- meaning they are neutral. Appearing second after 'Pro' tweets is 'News' tweets at 23%- very indicative of the relevancy of the topic.")
+		st.subheader("Mostly used words are show below")
+		st.image('resources/imgs/mostly_used.png', caption='Climate Change',use_column_width=True)
+		st.info(
+			"""
+			The most common words used, in hierachy, across all four categories are 'climate', 'change', 'global', and then 'warming'. This is expected as the topic is centred around these words.
+
+			Also, words like 'science' and 'scientist' are frequent- which could imply that people are tweeting about scientific studies that support their views on climate change.
+
+			However, words such as 'hoax', 'fake', 'left' and 'scam' on ANTI tweets are more emphasized than the other categories- which is inline with the denier's sentiment.
+			"""
+		)
 
 	if selection == "Model Performance":
 		st.info("Below is the picture of how each Model used to create the app is performing")
