@@ -26,6 +26,7 @@ import re
 import nltk
 import joblib,os
 import streamlit as st
+import streamlit.components.v1 as components
 
 #import contractions
 from nltk.corpus import stopwords, wordnet
@@ -69,7 +70,6 @@ def display_prediction(input_text):
         output ="Pro"
         st.success(f"{output} Sentiment Predicted")
         st.success("Tweets that support the belief of man-made climate change")
-		
     else:
         output = "News"
         st.warning(f"{output} Sentiment Predicted")
@@ -164,22 +164,203 @@ def main():
 		pass
 
 	if selection == "Model Performance":
-		model_selected = ["LogisticRegression", "RidgeClassifier", "LinearSVC", "SGDClassifier", "Support Vector Machine"]
+		st.info("Below is the picture of how each Model used to create the app is performing")
+		st.image('resources/imgs/models.png', caption='Climate Change',use_column_width=True)
+		model_selected = ["Select Model", "LogisticRegression", "RidgeClassifier", "LinearSVC", "SGDClassifier", "SVC"]
 		selected_model = st.selectbox("Choose Model Metrics By Model Type", model_selected)
+		
 		if selected_model =="LinearSVC":
-			pass
-
-		if selected_model =="Support Vector Machine":
-			pass
+			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
+			components.html(
+				"""
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+				<style></style>
+				<div class="d-flex justify-content-center">
+					<table border="1" class="dataframe">
+					<thead>
+						<tr style="text-align: right">
+						<th></th>
+						<th>Vectorizer Type</th>
+						<th>Model Name</th>
+						<th>Precision</th>
+						<th>Recall</th>
+						<th>F1-score</th>
+						<th>Execution Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th></th>
+						<td>TF_1</td>
+						<td>LinearSVC</td>
+						<td>71.7736</td>
+						<td>72.8192</td>
+						<td>72.2926</td>
+						<td>0.250359</td>
+						</tr>
+					</tbody>
+				"""
+			)
+			
+		if selected_model =="SVC":
+			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
+			components.html(
+				"""
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+				<style></style>
+				<div class="d-flex justify-content-center">
+					<table border="1" class="dataframe">
+					<thead>
+						<tr style="text-align: right">
+						<th></th>
+						<th>Vectorizer Type</th>
+						<th>Model Name</th>
+						<th>Precision</th>
+						<th>Recall</th>
+						<th>F1-score</th>
+						<th>Execution Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th></th>
+						<td>TF_1</td>
+						<td>SVC</td>
+						<td>76.8198</td>
+						<td>75.2212</td>
+						<td>76.0121</td>
+						<td>47.981690</td>
+						</tr>
+					</tbody>
+				"""
+			)
 
 		if selected_model =="RidgeClassifier":
-			pass
+			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
+			components.html(
+				"""
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+				<style></style>
+				<div class="d-flex justify-content-center">
+					<table border="1" class="dataframe">
+					<thead>
+						<tr style="text-align: right">
+						<th></th>
+						<th>Vectorizer Type</th>
+						<th>Model Name</th>
+						<th>Precision</th>
+						<th>Recall</th>
+						<th>F1-score</th>
+						<th>Execution Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th></th>
+						<td>TF_1</td>
+						<td>RidgeClassifier</td>
+						<td>64.7715</td>
+						<td>65.9924</td>
+						<td>65.3763</td>
+						<td>4.340930</td>
+						</tr>
+					</tbody>
+				"""
+			)
 
-		if selected_model =="LogisiticRegression":
-			pass
+		if selected_model =="LogisticRegression":
+			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
+			components.html(
+				"""
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+				<style></style>
+				<div class="d-flex justify-content-center">
+					<table border="1" class="dataframe">
+					<thead>
+						<tr style="text-align: right">
+						<th></th>
+						<th>Vectorizer Type</th>
+						<th>Model Name</th>
+						<th>Precision</th>
+						<th>Recall</th>
+						<th>F1-score</th>
+						<th>Execution Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th></th>
+						<td>TF_1</td>
+						<td>LogisiticRegression</td>
+						<td>76.8198</td>
+						<td>75.2212</td>
+						<td>76.0121</td>
+						<td>47.981690</td>
+						</tr>
+					</tbody>
+				"""
+			)
 
 		if selected_model =="SGDClassifier":
-			pass
+			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
+			components.html(
+				"""
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+				<style></style>
+				<div class="d-flex justify-content-center">
+					<table border="1" class="dataframe">
+					<thead>
+						<tr style="text-align: right">
+						<th></th>
+						<th>Vectorizer Type</th>
+						<th>Model Name</th>
+						<th>Precision</th>
+						<th>Recall</th>
+						<th>F1-score</th>
+						<th>Execution Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<th></th>
+						<td>TF_1</td>
+						<td>SGDClassifier</td>
+						<td>71.7736</td>
+						<td>72.8192</td>
+						<td>72.2926</td>
+						<td>0.250359</td>
+						</tr>
+					</tbody>
+				"""
+			)
+
+	st.subheader("You may click on the button below to jump to the conclusiion")
+	if st.button("Click me to see the conclusion"):
+    		st.info(
+				"""
+				The SVC model performed better compared to all the models tested with an F1-Score of approximately 76%, when a Tfid vectorizer is used. After performing a hyperparameter tuning of the model, the F1-score rose by a very small marging of 0.5%.
+
+				Naive Bayes process speed is the fastest, while it produced an underperforming average F1-score.
+
+				The Logistic Regression and the LinearSVC is considerably fast and yet produces well above average F1-scores, with a very less margin from the best score. In loose terms, the two models are able to effortlessly produce quality performance, even though its F1-scores were not the best compared to the best score model.
+
+				Whereas the SVC with the best f1-score takes a long time to produce the highest model. Loosely meaning it is trading processing speed over accuracy.
+
+				Therefore, with this realization, overall, the Logistic regression, when the TF1 vectorizer type is used, performed better than all the models with an F1-score of approximately 74% and execution of 3 seconds. Even though the SVC, Tfid, produces better F1 results by a margin of 2%, the SVc is approx. 15 times slower than Logistic Regression, when using the Tfid vectorizer type.
+
+				However, with the aim of getting the best f1-score, we will select the SVC, Tfid vectorizer, as our best model
+				"""
+			)
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
