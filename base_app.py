@@ -185,12 +185,19 @@ def main():
 			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
 			components.html(
 				"""
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-				<style></style>
-				<div class="d-flex justify-content-center">
-					<table border="1" class="dataframe">
+				<!DOCTYPE html>
+				<html lang="en">
+				<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+
+				<div class="container">          
+				<table class="table">
 					<thead>
 						<tr style="text-align: right">
 						<th></th>
@@ -200,19 +207,25 @@ def main():
 						<th>Recall</th>
 						<th>F1-score</th>
 						<th>Execution Time</th>
-						</tr>
+						</tr>					
 					</thead>
 					<tbody>
 						<tr>
-						<th></th>
-						<td>TF_1</td>
-						<td>LinearSVC</td>
-						<td>71.7736</td>
-						<td>72.8192</td>
-						<td>72.2926</td>
-						<td>0.250359</td>
-						</tr>
+                        <th></th>
+                        <td>TF_1</td>
+                        <td>LinearSVC</td>
+                        <td>71.7736</td>
+                        <td>72.8192</td>
+                        <td>72.2926</td>
+                        <td>0.250359</td>
+                        </tr>
 					</tbody>
+				</table>
+				</div>
+
+				</body>
+				</html>
+				
 				"""
 			)
 			
@@ -220,12 +233,19 @@ def main():
 			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
 			components.html(
 				"""
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-				<style></style>
-				<div class="d-flex justify-content-center">
-					<table border="1" class="dataframe">
+				<!DOCTYPE html>
+				<html lang="en">
+				<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+
+				<div class="container">          
+				<table class="table">
 					<thead>
 						<tr style="text-align: right">
 						<th></th>
@@ -235,19 +255,24 @@ def main():
 						<th>Recall</th>
 						<th>F1-score</th>
 						<th>Execution Time</th>
-						</tr>
+						</tr>					
 					</thead>
 					<tbody>
 						<tr>
-						<th></th>
-						<td>TF_1</td>
-						<td>SVC</td>
-						<td>76.8198</td>
-						<td>75.2212</td>
-						<td>76.0121</td>
-						<td>47.981690</td>
-						</tr>
+                        <th></th>
+                        <td>TF_1</td>
+                        <td>SVC</td>
+                        <td>76.8198</td>
+                        <td>75.2212</td>
+                        <td>76.0121</td>
+                        <td>47.981690</td>
+                        </tr>
 					</tbody>
+				</table>
+				</div>
+
+				</body>
+				</html>
 				"""
 			)
 
@@ -255,12 +280,19 @@ def main():
 			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
 			components.html(
 				"""
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-				<style></style>
-				<div class="d-flex justify-content-center">
-					<table border="1" class="dataframe">
+				<!DOCTYPE html>
+				<html lang="en">
+				<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+
+				<div class="container">          
+				<table class="table">
 					<thead>
 						<tr style="text-align: right">
 						<th></th>
@@ -270,19 +302,24 @@ def main():
 						<th>Recall</th>
 						<th>F1-score</th>
 						<th>Execution Time</th>
-						</tr>
+						</tr>					
 					</thead>
 					<tbody>
 						<tr>
-						<th></th>
-						<td>TF_1</td>
-						<td>RidgeClassifier</td>
-						<td>64.7715</td>
-						<td>65.9924</td>
-						<td>65.3763</td>
-						<td>4.340930</td>
-						</tr>
+                        <th></th>
+                        <td>TF_1</td>
+                        <td>RidgeClassifier</td>
+                        <td>64.7715</td>
+                        <td>65.9924</td>
+                        <td>65.3763</td>
+                        <td>4.340930</td>
+                        </tr>
 					</tbody>
+				</table>
+				</div>
+
+				</body>
+				</html>
 				"""
 			)
 
@@ -290,12 +327,19 @@ def main():
 			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
 			components.html(
 				"""
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-				<style></style>
-				<div class="d-flex justify-content-center">
-					<table border="1" class="dataframe">
+				<!DOCTYPE html>
+				<html lang="en">
+				<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+
+				<div class="container">          
+				<table class="table">
 					<thead>
 						<tr style="text-align: right">
 						<th></th>
@@ -305,19 +349,24 @@ def main():
 						<th>Recall</th>
 						<th>F1-score</th>
 						<th>Execution Time</th>
-						</tr>
+						</tr>					
 					</thead>
 					<tbody>
 						<tr>
-						<th></th>
-						<td>TF_1</td>
-						<td>LogisiticRegression</td>
-						<td>76.8198</td>
-						<td>75.2212</td>
-						<td>76.0121</td>
-						<td>47.981690</td>
-						</tr>
+                        <th></th>
+                        <td>TF_1</td>
+                        <td>LogisiticRegression</td>
+                        <td>76.8198</td>
+                        <td>75.2212</td>
+                        <td>76.0121</td>
+                        <td>47.981690</td>
+                        </tr>
 					</tbody>
+				</table>
+				</div>
+
+				</body>
+				</html>
 				"""
 			)
 
@@ -325,12 +374,19 @@ def main():
 			st.markdown("<h3 style='color:#0069d1'>Model Performance</h3><br/>",unsafe_allow_html=True)
 			components.html(
 				"""
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-				<style></style>
-				<div class="d-flex justify-content-center">
-					<table border="1" class="dataframe">
+				<!DOCTYPE html>
+				<html lang="en">
+				<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				</head>
+				<body>
+
+				<div class="container">          
+				<table class="table">
 					<thead>
 						<tr style="text-align: right">
 						<th></th>
@@ -340,19 +396,24 @@ def main():
 						<th>Recall</th>
 						<th>F1-score</th>
 						<th>Execution Time</th>
-						</tr>
+						</tr>					
 					</thead>
 					<tbody>
 						<tr>
-						<th></th>
-						<td>TF_1</td>
-						<td>SGDClassifier</td>
-						<td>71.7736</td>
-						<td>72.8192</td>
-						<td>72.2926</td>
-						<td>0.250359</td>
-						</tr>
+                        <th></th>
+                        <td>TF_1</td>
+                        <td>SGDClassifier</td>
+                        <td>71.7736</td>
+                        <td>72.8192</td>
+                        <td>72.2926</td>
+                        <td>0.250359</td>
+                        </tr>
 					</tbody>
+				</table>
+				</div>
+
+				</body>
+				</html>
 				"""
 			)
 
