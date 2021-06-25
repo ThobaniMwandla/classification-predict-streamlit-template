@@ -429,7 +429,7 @@ def main():
 
 					Whereas the SVC with the best f1-score takes a long time to produce the highest model. Loosely meaning it is trading processing speed over accuracy.
 
-					Therefore, with this realization, overall, the Logistic regression, when the TF1 vectorizer type is used, performed better than all the models with an F1-score of approximately 74% and execution of 3 seconds. Even though the SVC, Tfid, produces better F1 results by a margin of 2%, the SVc is approx. 15 times slower than Logistic Regression, when using the Tfid vectorizer type.
+					Therefore, with this realization, overall, the Logistic regression, when the TF1 vectorizer type is used, performed better than all the models with an F1-score of approximately 74% and execution of 3 seconds. Even though the SVC, Tfid, produces better F1 results by a margin of 2%, the SVc is Approximately 15 times slower than Logistic Regression, when using the Tfid vectorizer type.
 
 					However, with the aim of getting the best f1-score, we will select the SVC, Tfid vectorizer, as our best model
 					"""
